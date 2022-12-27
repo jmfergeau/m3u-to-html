@@ -1,5 +1,5 @@
 // Variables
-const m3ufile = "default.m3u";
+const m3ufile = "default.m3u8";
 const theDiv = document.getElementById("m3utohtml");
 
 // Le main function
