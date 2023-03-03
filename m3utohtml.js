@@ -25,6 +25,7 @@ function m3uToHtml(data) {
             songName = songName.replace(".mp3","");
             songName = songName.replace("(152kbit_Opus)","");
             songName = songName.replace("(128kbit_AAC)","");
+            songName = songName.replace("(192kbit_AAC)","");
 
             // appends a list element for the song
             let songEntry = document.createElement("li");
