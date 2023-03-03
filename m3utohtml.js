@@ -21,11 +21,12 @@ function m3uToHtml(data) {
             // removes the absolute path
             let songName = line.replace(/^.*[\\\/]/, '');
 
-            // Removes the extension and cleans up some jdownloader bs
-            songName = songName.replace(".mp3","");
-            songName = songName.replace("(152kbit_Opus)","");
-            songName = songName.replace("(128kbit_AAC)","");
-            songName = songName.replace("(192kbit_AAC)","");
+            // Removes the extensions and cleans up some jdownloader bs
+            // Add more if needed.
+            toClean = [".mp3",".m4a","(152kbit_Opus)","(128kbit_Opus)","(128kbit_AAC)","(192kbit_AAC)","(256kbit)","(128kbit)","(152kbit)","(384kbit_AAC)"];
+            toClean.forEach((item) => {
+                songName = songName.replace(item,"");
+            });
 
             // appends a list element for the song
             let songEntry = document.createElement("li");
